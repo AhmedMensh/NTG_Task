@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/charactersFragment">
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.ntg_task.ui.characters.CharactersFragment"
+        >
+
+        <action
+            android:id="@+id/action_charactersFragment_to_characterProfileFragment"
+            app:destination="@id/characterProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterProfileFragment"
+        android:name="com.example.ntg_task.ui.character_profile.CharacterProfileFragment"
+         >
+        <argument
+            android:name="profile"
+            app:argType="com.example.ntg_task.domain.entities.MarvelCharacter" />
+    </fragment>
+</navigation>
